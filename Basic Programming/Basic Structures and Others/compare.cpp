@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char * getString()
+{
+	char *str = (char*) malloc(20 * sizeof(char));
+	gets(str);
+	return str;
+	
+}
+
+char * compareThis(char input1[], char input2[])
+{
+	if(strcmp(input1, input2)==0)
+	    return "Equal";
+	else
+	    return "Not Equal";
+}
+
+
+int main(int argc, char *argv[]) {
+	
+	char str1[20]="asdf", str2[20]="asdf";
+	strcpy(str1, getString());
+	strcpy(str2, getString());
+	
+	
+	printf("%s\n",str1);
+	printf("%s\n",str2);
+	
+	printf("%s",compareThis(str1,str2));
+	
+	
+	return 0;
+}
+
+
